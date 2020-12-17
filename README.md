@@ -64,13 +64,20 @@ Overall results for all tests and pre-checks synthesised into a single report (m
 Modular, component R scripts formatted to accept the standardised input data.
 
 Order:
-    1. Check input data – are positions all marine (if this is marine only), datetime in order, no duplicates, (anything else)? Plot basic stuff. Save in standardised folder structure.
-    2. Test input data for autocorrelation, other tests? Save report in folder.
-    3. Computer system check: all packages installed & loaded, get system details to provide time estimates (later). Additional (numbered) report.
-    4. Correlate acquisition. Collectively agree defaults – most but maybe not all? And which variants e.g. satellite ChlA: daily, 3day, 8day, month, etc. User options to change these. Ability to ingest user’s own correlates where not universally available. Save output df and make table of variables used with resolution (& other data details), sources & references (user-ingested data to be accompanied with these details in text file, csv, bibtex, etc).
-    5. Correlate formatting (do as part of above?)
-    6. Run tests. User options of which to run, default all? Likely default most. Pre-check of estimated time per-test & total. Option to restart. Save results (data, plots, etc.?) to per-test subfolders. Script format: probably 1 control script which calls individual tests scripts and final report script. Tests scripts run the tests (duh) and also do the plotting, reporting, file saving. Report script stitches together individual subfolder reports into sections, including initial data plots & status, processing done, autocorrelation results, correlates used table.
-    7. Free on Github & CRAN.
+
+1. Check input data – are positions all marine (if this is marine only), datetime in order, no duplicates, (anything else)? Plot basic stuff. Save in standardised folder structure.
+
+2. Test input data for autocorrelation, other tests? Save report in folder.
+
+3. Computer system check: all packages installed & loaded, get system details to provide time estimates (later). Additional (numbered) report.
+
+4. Correlate acquisition. Collectively agree defaults – most but maybe not all? And which variants e.g. satellite ChlA: daily, 3day, 8day, month, etc. User options to change these. Ability to ingest user’s own correlates where not universally available. Save output df and make table of variables used with resolution (& other data details), sources & references (user-ingested data to be accompanied with these details in text file, csv, bibtex, etc).
+
+5. Correlate formatting (do as part of above?)
+
+6. Run tests. User options of which to run, default all? Likely default most. Pre-check of estimated time per-test & total. Option to restart. Save results (data, plots, etc.?) to per-test subfolders. Script format: probably 1 control script which calls individual tests scripts and final report script. Tests scripts run the tests (duh) and also do the plotting, reporting, file saving. Report script stitches together individual subfolder reports into sections, including initial data plots & status, processing done, autocorrelation results, correlates used table.
+
+7. Free on Github & CRAN.
 
 # How do we start?
 Github project. Also some kind of community location, email list?
