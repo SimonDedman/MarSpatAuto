@@ -73,13 +73,17 @@ List of tests. And existing packages. And code experts for those packages who’
 
 # List Of Tests
 Habitat comparison: if you have a vector of lat lon datetimes, and get the accompanying environmental variables, you can compare the habitat subset against a larger habitat subset (e.g. our study area vs whole known species range) or total global habitat (i.e. ignoring the species data).
+
 Electivity: follows from above
+
 Core use area, minimum 50% 75% 90% kernel use density polygons, including coastline removal.
+
 Kmeans XYT behaviour bins, resident vs migration
+
 Importance & relationship of environmental predictors to spatial abundance, gbm.auto etc
-Share with
-Cara & Roy & Bob, Rebecca, Chuck, Andrea, Dovi, Seb Pardo, Bryan, Francesco Ferretti, Jon Dale, Elliott Hazen, Chris Lowe la, Tristan, John Froesckhe, Marcus Drymon?, others?
+
 Outcomes supplementary material document idea
+
 Idea for a standard-format SM doc which contains the bibtex of the main manuscript, and an unlimited number of single line text fields for individual outcomes/facts from the paper, i.e. what the paper contributes in terms of new content/knowledge/facts, in plain English. E.g.:
     • smalltooth sawfish prefer water temperatures between 23.3 and 27.4°C
     • stress hormone is moderately positively correlated to lactate in tiger sharks
