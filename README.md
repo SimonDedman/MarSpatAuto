@@ -43,14 +43,19 @@ Inclusive of pre-testing for S/T autocorrelation of original data & autocorrelat
 # What do the results mean?
 So you ran all these tests and R spat out a whole slew of opaque values and coefficients, across hundreds of screen-height scrolls. Hoorah? Now what? Literature review for the meaning of each of these. Presume that information on how to interpret all elements of a test result exists (they don’t always). Presume that available information warns about risks from certain data types and/or formats (they don’t usually). Re-run the test but this time assign the output to an object so you can use it. Spend days formatting plots and tables so you can display and share said results.
 ALL of this is formulaic and can be codified. It’s a time-well that disproportionately swallows earlier career researchers, until they level up their background knowledge and (gg)plotting skills.
+
 Instead:
+
 Contextualised meaning of results, using simple text code in R (if P<0.2 then “this result is significant”), plain English interpretation, with references and quoted text blocks of key bits from those papers as appropriate.
 All individual results plotted and saved as images into folders with appropriate names, and accompanying text files for suggested captions. R Markdown (& pdf, html) reports created for each test.
+
 And even then there’s drudge that can be automated. It’s great that we can produce hundreds of plots with a few lines of code. But you now have to analyse and common-sense-interpret hundreds of plots, scribble notes for each, decide which are important and/or interesting, consider their interactions, coalesce this into a physically/biologically/ecologically-contextualised story. Again, much of this is formulaic, even if it may not feel that way initially.
 Firstly, simple plot analysis. If that correlate is contributing nearly zero explanatory power, ignore it. Easy enough right? Tell me you’ve never looked at those plots. Tell me you haven’t thought “that’s quite interesting” even though you know the caveat is that this correlate explains 0.001% of the variance. You can’t get those brain cycles back.
+
 Harder stuff that’s still easy: is it a linear relationship? Curvilinear? Which way is it going? “More of X results in less of Y”. “Y has a domed relationship with X which peaks when X is 4”. Are there thresholds? “Y is notably higher when X > 2.79”.
 Take those, order them by variable importance. Couch paragraphs in those terms: “Salinity explains 7% of the variance so its relationship with bull shark abundance is of relatively low but not insignificant value.” Etc.
 Secondary interpretations can be similarly codified (community input/legwork will be key here); temperature and depth have a known relationship so if both are present then a default paragraph can be included, followed by a dynamic text chunk which relates to the interaction strength in the results, the importance of each to the variance, etc.
+
 Tertiary (ecological / ecosystemic) results can be codified, given more work. “The data are predominantly from these depths and distances from shore, suggesting this is a coastal pelagic species. Known important drivers for this ecosystem group are A B and C, which are all found to be important in this analysis”. [This element of the results could be community collaborative, with results submittable to a shared database that could be queried for trends, feeding back to the interpretations for others. Generate results interactions pairplot matrix for all correlates, to populate with default text blocks & dynamic text code].
 
 Overall results for all tests and pre-checks synthesised into a single report (markdown, html, pdf) with tables, figures, and text.
