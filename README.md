@@ -5,11 +5,6 @@ Automating marine spatial date acquisition &amp; analyssi
 # Automating (marine) spatiotemporal data processing, acquisition and analysis
 Simon Dedman, 2020-11-12, simondedman@gmail.com www.simondedman.com 
 
-# Preface
-When I was at school we had a relatively meaningless geography text with an 8-point question asking for the factors humans consider when deciding locations of towns/settlements. I would typically try to formulate my answer in natural English prose, but due to the constraints of the small text field, I just wrote the answers as a comma separated list, and got 8/8. That I still remember this banal anecdote 25 years later is because of how profoundly it opened my eyes to the disconnect I had harboured between how I was trying to operate, and what was required. The teacher, and the testing board, didn’t care whether I had a nuanced understanding of the material. They didn’t care about me framing my thoughts in a natural, organic, prosaic form. Provide result? Get reward.
-
-We live in a publish or perish world that cares about THE story, not HIStory. The travails and tedium of your methodology and results sections are simply days of your life that you can’t claim credit for, nor get back. Lets – as a community – work together to simplify and accelerate this process, increasing the time we spend doing what we love, and increasing access to science to those outside the highest spires of academia.
-
 # Background
 Taggers & trackers of sharks and other large marine species typically collect the same type of data, and then one person spends countless days researching which explanatory variables / correlates they should try to acquire, tries to acquire them, acquires some, possibly researches how best to format them, formats some, researches which test to use to get the result they’re interested in, uses probably one of them, occasionally the best one, researches what the results mean, and then spends days plotting and replotting figures and tables, and poring over them.
 
