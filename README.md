@@ -1,5 +1,5 @@
 # MarSpatAuto
-Automating marine spatial date acquisition &amp; analyssi
+Automating marine spatial date acquisition &amp; analysis
 
 
 # Automating (marine) spatiotemporal data processing, acquisition and analysis
