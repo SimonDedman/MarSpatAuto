@@ -91,3 +91,6 @@ Idea for a standard-format SM doc which contains the bibtex of the main manuscri
     • female cownose rays reach sexual maturity at 5.3 years old (4.6 – 5.9 1SD)
 “There is a set of standard-tags (aka fields) existing, which can be interpreted by BibTeX or third-party tools. Those which are unknown are ignored by BibTeX, thus can be used to store additional information without interfering with the final outcome of a document. ” http://www.bibtex.org/Format/ 
 Could use the note field https://www.bibtex.com/format/ multiple times allowed. Could also add SM links here?
+
+# Ok so what do *I* do?
+Go to issues, think of an explanatory variable you use. Is there an issue for that? No? Create one. Go one better and find the highest res publically availavle dataset for that. If nothing else, create the issue.
