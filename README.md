@@ -104,4 +104,4 @@ Idea for a standard-format SM doc which contains the bibtex of the main manuscri
 Could use the note field https://www.bibtex.com/format/ multiple times allowed. Could also add SM links here?
 
 # Ok so what do *I* do?
-Go to issues, think of an explanatory variable you use. Is there an issue for that? No? Create one. Go one better and find the highest res publically availavle dataset for that. If nothing else, create the issue.
+Go to issues, think of an explanatory variable you use. Is there an issue for that? No? Create one. Go one better and find the highest res publically available dataset for that. If nothing else, create the issue. Or create an issue to chat about any element of this. Cheers!
