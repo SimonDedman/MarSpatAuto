@@ -75,7 +75,7 @@ Order:
 
 5. Correlate formatting (do as part of above?)
 
-6. Run tests. User options of which to run, default all? Likely default most. Pre-check of estimated time per-test & total. Option to restart. Save results (data, plots, etc.?) to per-test subfolders. Script format: probably 1 control script which calls individual tests scripts and final report script. Tests scripts run the tests (duh) and also do the plotting, reporting, file saving. Report script stitches together individual subfolder reports into sections, including initial data plots & status, processing done, autocorrelation results, correlates used table.
+6. Run tests. User options of which to run, default all? Likely default most. Pre-check of estimated time per-test & total. Option to restart. Save results (data, plots, etc.?) to per-test subfolders. Script format: probably 1 control script which calls individual tests scripts and final report script. Tests scripts run the tests (duh) and also do the plotting, reporting, file saving. Report script stitches together individual subfolder reports into sections, including initial data plots & status, processing done, autocorrelation results, correlates used table. See https://github.com/tidymodels/tidymodels & https://www.tidymodels.org/ & https://www.tidymodels.org/learn/ and build around that format.
 
 7. Free on Github & CRAN.
 
