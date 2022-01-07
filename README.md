@@ -10,7 +10,9 @@ Taggers & trackers of sharks and other large marine species typically collect th
 
 This solitary drudge work perpetuates despite our living in The Future, surrounded by powerful computers and mostly using the same two free programming languages which host innumerable freely-shared tests. Arguably this endemic tedious yeomanlike wheel-reinventing is due to the structure of science and academia, resulting in its being inherently brutally anti-collaborative and therefore highly inefficient when considered as a single sector.
 
-I propose that the majority of the ostensibly-highly-technical work that often comprises the bulk of the time spent on science, could be automated down to requiring only the barest user input, for any analytical technique that has been coded and shared. This would free up humans to do things that humans want to do (fieldwork, research) and are better at (interpreting findings into the wider contexts of ecology, policy, management, etc.). 
+I propose that the majority of the ostensibly-highly-technical work that often comprises the bulk of the time spent on science, could be automated down to requiring only the barest user input, for any analytical technique that has been coded and shared. This would free up humans to do things that humans want to do (fieldwork, research) and are better at (interpreting findings into the wider contexts of ecology, policy, management, etc.).
+
+Related article, concept contextualised within the wider future of humanity as relates to software and AI: https://medium.com/@SimonDedman/ai-and-the-future-of-marine-science-68a53dcd313d
 
 # What do we have?
 Tag data from large marine species typically have latitude, longitude, and datetime (typically daily). They maybe have (ARGOS) satellite strength (codes) or similar spatial error metrics, fish size, and other sensor readings like depth, internal and external temperature, light level, DO2. They might have additional metadata parameters like the ID of different individuals in the case of data contain multiple tracks, and similar metadata grouping columns like sex, stock, etc.
