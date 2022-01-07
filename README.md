@@ -65,23 +65,49 @@ Modular, component R scripts formatted to accept the standardised input data.
 
 Order:
 
-1. Check input data – are positions all marine (if this is marine only), datetime in order, no duplicates, (anything else)? Plot basic stuff. Save in standardised folder structure.
+0. set overall theme for all plots & reports which can be changed. E.g. per journal. Like CSL files. Colour-blind friendly. Viridis2.
 
-2. Test input data for autocorrelation, other tests? Save report in folder.
+1. Check input data – are positions all marine (if this is marine only), datetime in order, no duplicates, (anything else)? Plot basic stuff. Save in standardised folder structure. Ingest samples, clean, report.
+
+2. Test input data for autocorrelation, other tests? Outliers, residual analysis, random forest imputation, etc. Save report in folder.
 
 3. Computer system check: all packages installed & loaded, get system details to provide time estimates (later). Additional (numbered) report.
 
 4. Correlate acquisition. Collectively agree defaults – most but maybe not all? And which variants e.g. satellite ChlA: daily, 3day, 8day, month, etc. User options to change these. Ability to ingest user’s own correlates where not universally available. Save output df and make table of variables used with resolution (& other data details), sources & references (user-ingested data to be accompanied with these details in text file, csv, bibtex, etc).
 
 5. Correlate formatting (do as part of above?)
+ 
+6. acquisition: embarassingly parallel: all rows of XYZT, for all variables.
+acq.SST.source()
+have people dump their scripts of functions into subfolders on github by var e.g. “acq.SST”. Regardless of how messy they are.
+Ideally have a compressed boolean/logical 4D raster for the data they have (i.e. 4D space of data provision they occupy). Get text info from the data source, then convert.
+For saving outputs: Add an index column to the samples df and save acquired data with just have an index column, i.e. 1c * Nr instead of 4c * Nr. Stitching scripts later can then join by Index only. Save as high compression R files.
 
-6. Run tests. User options of which to run, default all? Likely default most. Pre-check of estimated time per-test & total. Option to restart. Save results (data, plots, etc.?) to per-test subfolders. Script format: probably 1 control script which calls individual tests scripts and final report script. Tests scripts run the tests (duh) and also do the plotting, reporting, file saving. Report script stitches together individual subfolder reports into sections, including initial data plots & status, processing done, autocorrelation results, correlates used table. See https://github.com/tidymodels/tidymodels & https://www.tidymodels.org/ & https://www.tidymodels.org/learn/ and build around that format.
+6. Run tests. User options of which to run, default all? Likely default most. Function to deselect tests if it's mathematically unreasonable/illegel to run them on these data for whatever reason. Not sure what the reason would be given the point is the data are all tracking? Or any XYZT i.e. could be acoustic. Pre-check of estimated time per-test & total. Option to restart. Save results (data, plots, etc.?) to per-test subfolders. Script format: probably 1 control script which calls individual tests scripts and final report script. Tests scripts run the tests (duh) and also do the plotting, reporting, file saving. Report script stitches together individual subfolder reports into sections, including initial data plots & status, processing done, autocorrelation results, correlates used table. See https://github.com/tidymodels/tidymodels & https://www.tidymodels.org/ & https://www.tidymodels.org/learn/ and build around that format.
+Use tidymodels where possible: individual scripts to analyse, generate results including errors, model evaluation, plots, save model objects for others to plot differently. Scrape acquisitions folders for available variables. Specify groups & XYZT subsets here.
 
-7. Free on Github & CRAN.
+6.5 Results meta-analysis (meta-results?): per Kyle chats, copy those thoughts here. Do this here as part of each anl.SST.source() script, OR separately after, in case cross-variable insights allow increased reduction of results number? Maybe both: within-var reductions here, then
+
+7. Across-var results meta-analysis & reduction, insights generation.
+Synthesising Huge Results Stack: 
+If analysing the same types of data, the results outputs will have the same biological meaning.
+Those numerical results (e.g. linearity index = 0.8) can thus have simple text lines (e.g. "this is a straight path indicative of migration").
+Expanding this, whole suites of results can be summarised e.g. "the path is STRAIGHT and LONG. The home range is LARGE; compared to the JUVENILE stage, the ADULT home range is LARGER. Etc".
+Expanding THIS, multiple groups (e.g. adult/juvenile above) can have comparison summaries. "LEMON SHARKS have smaller home ranges than BULL SHARKS".
+This can all be collated into a report.
+Which bits are the most important? Differences I suppose. So it could highlight differences by sorting outcomes by differential.
+AND THEN, potentially there could be a way to evaluate which results components are most informative to specific conclusions. I'm thinking PCA here maybe.
+Results shape evaluation. If you have line plots of variables' relationships, those can probably be decoded with some relatively simple algorithmic rules. Is the relationship positive/negative, is it strong, is it linear, curvilinear, threshold, threshold where. Convert all that to numbers and again give the plain text meaning.
+If you have lots of results which mean the same thing (plots metrics are similar), that should be easy to show e.g. with K-means clustering. Then you could sort & prioritise the 'best' of those similar results.
+
+8. Free on Github & CRAN.
 
 # How do we start?
 Github project. Also some kind of community location, email list?
-List of tests. And existing packages. And code experts for those packages who’ll be prepared to assist in writing the automation script.
+Acquisition: have people dump their scripts of functions into subfolders on github by var e.g. “acq.SST”. Regardless of how messy they are.
+Ideally have a compressed boolean/logical 4D raster for the data they have (i.e. 4D space of data provision they occupy). Get text info from the data source, then convert. Script to automatically A-union-B 4D join all 4D data presence rasters per variable subfolder.
+Tests: List of tests. And existing packages. And code experts for those packages who’ll be prepared to assist in writing the automation script.
+Per acquisition: have people dump their scripts there. Might just be few-line functions. But should confirm to report output formatting.
 
 # List Of Tests
 Habitat comparison: if you have a vector of lat lon datetimes, and get the accompanying environmental variables, you can compare the habitat subset against a larger habitat subset (e.g. our study area vs whole known species range) or total global habitat (i.e. ignoring the species data).
