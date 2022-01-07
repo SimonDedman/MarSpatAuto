@@ -83,12 +83,12 @@ have people dump their scripts of functions into subfolders on github by var e.g
 Ideally have a compressed boolean/logical 4D raster for the data they have (i.e. 4D space of data provision they occupy). Get text info from the data source, then convert.
 For saving outputs: Add an index column to the samples df and save acquired data with just have an index column, i.e. 1c * Nr instead of 4c * Nr. Stitching scripts later can then join by Index only. Save as high compression R files.
 
-6. Run tests. User options of which to run, default all? Likely default most. Function to deselect tests if it's mathematically unreasonable/illegel to run them on these data for whatever reason. Not sure what the reason would be given the point is the data are all tracking? Or any XYZT i.e. could be acoustic. Pre-check of estimated time per-test & total. Option to restart. Save results (data, plots, etc.?) to per-test subfolders. Script format: probably 1 control script which calls individual tests scripts and final report script. Tests scripts run the tests (duh) and also do the plotting, reporting, file saving. Report script stitches together individual subfolder reports into sections, including initial data plots & status, processing done, autocorrelation results, correlates used table. See https://github.com/tidymodels/tidymodels & https://www.tidymodels.org/ & https://www.tidymodels.org/learn/ and build around that format.
+7. Run tests. User options of which to run, default all? Likely default most. Function to deselect tests if it's mathematically unreasonable/illegel to run them on these data for whatever reason. Not sure what the reason would be given the point is the data are all tracking? Or any XYZT i.e. could be acoustic. Pre-check of estimated time per-test & total. Option to restart. Save results (data, plots, etc.?) to per-test subfolders. Script format: probably 1 control script which calls individual tests scripts and final report script. Tests scripts run the tests (duh) and also do the plotting, reporting, file saving. Report script stitches together individual subfolder reports into sections, including initial data plots & status, processing done, autocorrelation results, correlates used table. See https://github.com/tidymodels/tidymodels & https://www.tidymodels.org/ & https://www.tidymodels.org/learn/ and build around that format.
 Use tidymodels where possible: individual scripts to analyse, generate results including errors, model evaluation, plots, save model objects for others to plot differently. Scrape acquisitions folders for available variables. Specify groups & XYZT subsets here.
 
-6.5 Results meta-analysis (meta-results?): per Kyle chats, copy those thoughts here. Do this here as part of each anl.SST.source() script, OR separately after, in case cross-variable insights allow increased reduction of results number? Maybe both: within-var reductions here, then
+7.5 Results meta-analysis (meta-results?): Do this here as part of each anl.SST.source() script, OR separately after, in case cross-variable insights allow increased reduction of results number? Maybe both: within-var reductions here, then
 
-7. Across-var results meta-analysis & reduction, insights generation.
+8. Across-var results meta-analysis & reduction, insights generation.
 Synthesising Huge Results Stack: 
 If analysing the same types of data, the results outputs will have the same biological meaning.
 Those numerical results (e.g. linearity index = 0.8) can thus have simple text lines (e.g. "this is a straight path indicative of migration").
@@ -100,7 +100,7 @@ AND THEN, potentially there could be a way to evaluate which results components 
 Results shape evaluation. If you have line plots of variables' relationships, those can probably be decoded with some relatively simple algorithmic rules. Is the relationship positive/negative, is it strong, is it linear, curvilinear, threshold, threshold where. Convert all that to numbers and again give the plain text meaning.
 If you have lots of results which mean the same thing (plots metrics are similar), that should be easy to show e.g. with K-means clustering. Then you could sort & prioritise the 'best' of those similar results.
 
-8. Free on Github & CRAN.
+9. Free on Github & CRAN.
 
 # How do we start?
 Github project. Also some kind of community location, email list?
